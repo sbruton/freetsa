@@ -1,0 +1,20 @@
+# macOS cruft
+.DS_Store
+
+# rust
+target/
+Cargo.lock
+
+# artifacts
+*.lock
+
+# sensitive
+*.crt
+*.pem
+*.key
+*.pfx
+*.p12
+*.pkcs7
+*.tsr
+*.tsq
+*.log
