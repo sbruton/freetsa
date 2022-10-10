@@ -1,4 +1,3 @@
-use sha2::{Digest, Sha512};
 use simple_asn1::{ASN1Block, BigUint, OID};
 use thiserror::Error;
 
@@ -27,6 +26,7 @@ pub enum TimestampFileError {
 pub async fn timestamp_file(
     path: impl AsRef<std::path::Path>,
 ) -> Result<TimestampResponse, TimestampFileError> {
+    use sha2::{Digest, Sha512};
     let file = tokio::fs::read(path)
         .await
         .map_err(TimestampFileError::FileIo)?;
