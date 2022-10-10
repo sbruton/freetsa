@@ -3,11 +3,11 @@ name = "freetsa"
 version = "0.1.0"
 
 authors = ["Sean Bruton <sean@unnecessary.llc>"]
-categories = []
+categories = ["api-bindings", "authentication", "command-line-utilities", "cryptography"]
 description = "Client library and CLI utility for acquiring timestamps from freetsa.org"
 documentation = "https://docs.rs/freetsa/"
 edition = "2021"
-keywords = []
+keywords = ["freetsa", "timestamp"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/sbruton/freetsa"
 rust-version = "1.60"
