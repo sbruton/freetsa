@@ -19,10 +19,14 @@ clean:
     if [ -e example.tsr ]; then rm example.tsr; fi
     if [ -e example.tsq ]; then rm example.tsq; fi
 
+# generate html documentation for the library
+doc:
+    cargo doc --no-deps --all-features --open
+
 # timestamp Cargo.toml using the example code examples/file.rs
 example-file: _sync_certs
-    cargo run --example file --features file-example
+    cargo run --example file --features file
 
 # timestamp a hash using the example code examples/hash.rs
 example-hash: _sync_certs
-    cargo run --example hash --features hash-example
+    cargo run --example hash

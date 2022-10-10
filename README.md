@@ -32,7 +32,7 @@ use freetsa::prelude::*;
 
 // timestamp a hash that you generate
 let hash: Vec<u8> = _generate_your_hash_somehow();
-let TimestampResponse { query, reply } = timestamp_hash(hash).await.unwrap();
+let TimestampResponse { reply, .. } = timestamp_hash(hash).await.unwrap();
 
 // timestamp a sha512 hash generated for you from a file you specify
 let TimestampResponse { query, reply } = timestamp_file("path/to/my/file").await.unwrap();
