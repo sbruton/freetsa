@@ -19,12 +19,10 @@ required-features = ["bin"]
 
 [[example]]
 name = "file"
-path = "examples/file.rs"
-requried-features = ["file-example"]
+required-features = ["file-example"]
 
 [[example]]
 name = "hash"
-path = "examples/hash.rs"
 required-features = ["hash-example"]
 
 [dependencies]
@@ -42,3 +40,6 @@ default = []
 file = ["sha2", "tokio", "tokio/fs"]
 file-example = ["file", "tokio", "tokio/macros", "tokio/rt-multi-thread"]
 hash-example = ["hex-literal", "tokio", "tokio/macros", "tokio/rt-multi-thread"]
+
+[package.metadata.docs.rs]
+all-features = true
