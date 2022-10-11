@@ -26,7 +26,7 @@ name = "hash"
 
 [dependencies]
 clap = {version = "4.0.12", features = ["derive"], optional = true}
-reqwest = "0.11.12"
+reqwest = {version = "0.11.12", default-features = false}
 sha2 = {version = "0.10.6", optional = true}
 simple_asn1 = "0.6.2"
 thiserror = "1.0.37"
@@ -39,8 +39,10 @@ tokio = {version = "1.21.2", features = ["fs", "macros", "rt-multi-thread"]}
 
 [features]
 bin = ["clap", "file", "tokio", "tokio/macros", "tokio/rt-multi-thread"]
-default = []
+default = ["native-tls"]
 file = ["sha2", "tokio", "tokio/fs"]
+native-tls = ["reqwest/native-tls"]
+rustls-tls = ["reqwest/rustls-tls"]
 
 [package.metadata.docs.rs]
 all-features = true
