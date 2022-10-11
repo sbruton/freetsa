@@ -1,6 +1,6 @@
 [package]
 name = "freetsa"
-version = "0.1.2"
+version = "0.1.3"
 
 authors = ["Sean Bruton <sean@unnecessary.llc>"]
 categories = ["api-bindings", "authentication", "command-line-utilities", "cryptography"]
